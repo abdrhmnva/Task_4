@@ -60,7 +60,7 @@ Run the following command to execute the test cases:
 python -m unittest discover tests
 
 ## UML Class Diagram
-![UML Diagram](path/to/file/uml-diagram.png)
+![UML Diagram](diagram.png)
 
 
 
