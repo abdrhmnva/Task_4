@@ -1,0 +1,28 @@
+@startuml
+class User {
+    - user_id: int
+    - name: str
+    - surname: str
+    - birthday: datetime
+    - email: str
+    - password: str
+    + get_details(): str
+    + get_age(): int
+}
+
+class UserUtil {
+    + generate_user_id(): int
+    + generate_password(): str
+    + is_strong_password(password: str): bool
+    + generate_email(name: str, surname: str, domain: str): str
+    + validate_email(email: str): bool
+}
+
+class UserService {
+    + add_user(user: User): void
+}
+
+UserUtil --|> User : uses
+UserService --|> User : manages
+
+@enduml
